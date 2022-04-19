@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'node:16-alpine' }
+    docker { image 'maprtech/pacc:6.2.0_7.0.0_ubuntu18' }
   }
   stages {
     stage('Test') {
