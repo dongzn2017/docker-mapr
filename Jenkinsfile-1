@@ -6,6 +6,7 @@ pipeline {
     stage('Test') {
       steps {
         sh 'ls -a'
+        sh 'cat Jenkinsfile-1'
       }
     }
   }
