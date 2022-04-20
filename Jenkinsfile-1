@@ -1,11 +1,11 @@
 pipeline {
   agent {
-    docker { image 'maprtech/pacc:6.2.0_7.0.0_ubuntu18' }
+    docker { image 'ubuntu' }
   }
   stages {
     stage('Test') {
       steps {
-        sh 'mapr --version'
+        sh 'ls -a'
       }
     }
   }
