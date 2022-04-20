@@ -1,16 +1,10 @@
 pipeline {
-  agent none
+  agent {
+    docker { image 'ubuntu' }
+        }
   stages {
-    stage('Pre'){
-      agent none
-      steps{
-       sh 'sudo chmod 666 /var/run/docker.sock'
-      }
-    }
     stage('Test') {
-      agent {
-        docker { image 'ubuntu' }
-            }
+
       steps {
         sh 'ls -a'
       }
